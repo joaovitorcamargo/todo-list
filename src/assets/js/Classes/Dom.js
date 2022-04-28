@@ -1,7 +1,6 @@
 export default class Dom{
   constructor(textInput){
     this.textInput = textInput;
-    this._listArray = [];
   }
   createList(idListTodo){
     let listTodo = document.getElementById(idListTodo)
@@ -23,10 +22,6 @@ export default class Dom{
 
   set inputTodo(value){
     this.textInput = value
-  }
-
-  set setStorage(storage){
-    this._listArray = storage
   }
 
   #createListElement(){

@@ -33,7 +33,6 @@ document.addEventListener('click',(e)=>{
 })
 
 if(storageList?.length){
-  createElement.setStorage = storageList;
   for (let index = 0; index < storageList.length; index++) {
     document.getElementById('listTodo').innerHTML += storageList[index]
     document.querySelectorAll('.completed').forEach((e)=>{
