@@ -1,0 +1,159 @@
+@font-face {
+  font-family: coveltica;
+  src: url('../fonts/coolvetica.otf');
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: coveltica;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #141F36;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+  .content{
+    width: 80%;
+  }
+}
+
+.input-todo{
+  width: 95%;
+  border: 1px solid lightgray;
+  border-radius: 9px;
+  padding: 10px;
+  background-color: transparent;
+  color: lightgray;
+}
+
+.input-todo::placeholder{
+  color: lightgray;
+}
+
+.completed-or-not{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.completed-or-not > div {
+  display: flex;
+  align-items: center;
+}
+
+.completed-or-not > div >.check-input-is-completed{
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border: 1px solid #fff;
+  border-radius: 9px;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.completed-or-not > div >.check-input-is-completed:checked{
+  background-color: #2661E6;
+  content: "\2713";
+}
+.completed-or-not > div >.check-input-is-completed:checked::after{
+  position: absolute;
+  right: 3px;
+  color: #fff;
+  content: "\2715";
+}
+
+.completed-or-not > div > label{
+  color: white;
+  margin-left: 10px;
+}
+
+.completed-or-not > button{
+  margin-top: 20px;
+  border: none;
+  background-color: #2661E6;
+  color: #fff;
+  border-radius: 9px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.todos{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.todos > h3{
+  color: white;
+}
+
+.todos > ul{
+  margin-top: 10px;
+  list-style: none;
+}
+
+.todos > ul > li{
+  display: flex;
+  background-color: #243140;
+  border-radius: 9px;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.todos > ul > li > div{
+  display: flex;
+  align-items: center;
+}
+
+.todos > ul > li > div > span{
+  color: white;
+  margin-left: 10px;
+}
+.completed{
+  text-decoration: line-through;
+}
+
+.todos > ul > li > div > input{
+  border: 1px solid white;
+  appearance: none;
+  border-radius: 9px;
+  width: 20px;
+  height: 20px;
+}
+
+.todos > ul > li > div > input:checked{
+  background-color: #089E0B;
+}
+
+.todos > ul > li > button{
+  border: none;
+  position: relative;
+  background-color: #C6305C;
+  padding: 12px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.todos > ul > li > button::before{
+  color: #fff;
+  position: absolute;
+  top:2px;
+  right: 6.6px;
+  content: "\2715";
+}
